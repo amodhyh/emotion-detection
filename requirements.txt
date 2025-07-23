@@ -1,0 +1,31 @@
+# 1. Tell pip where to find the PyTorch CUDA11.6 wheels:
+--find-links https://download.pytorch.org/whl/cu116/torch_stable.html
+
+# 2. Core ML (will resolve to torch 2.x + CUDA 11.6)
+
+
+# 3. Transformer Backbone
+transformers
+tokenizers
+
+# 4. Sinhala Text Processing
+sinling
+
+# 5. Data Handling & Preprocessing
+pandas
+numpy
+scikit-learn
+nltk
+
+# 6. Training Utilities
+tqdm
+huggingface-hub
+
+# 7. Visualization & Monitoring
+matplotlib
+seaborn
+
+# 8. Code Quality & CI Hygiene
+black
+flake8
+pre-commit
