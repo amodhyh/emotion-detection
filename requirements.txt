@@ -13,7 +13,7 @@ sinling
 
 # 5. Data Handling & Preprocessing
 pandas
-numpy
+
 scikit-learn
 nltk
 
