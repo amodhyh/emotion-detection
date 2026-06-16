@@ -58,7 +58,6 @@ Direct fine-tuning of SinBERT-large using `RobertaForSequenceClassification` —
 ### 3. SinBERT + CNN (`Model.ipynb`, `New_DataSet_Models/Model.ipynb`)
 Hybrid architecture combining SinBERT contextual embeddings with multi-kernel CNNs:
 - **Optimizer:** AdamW with linear warmup scheduler
-- **PEFT:** LoRA (Parameter-Efficient Fine-Tuning) applied to SinBERT layers
 - **Regularization:** Class-weighted cross-entropy loss for imbalance, dropout
 - **Tuned hyperparameters:** learning rate, CNN filters, kernel sizes, dropout (grid search)
 - **Evaluation:** 5-fold stratified cross-validation, fresh model per fold, early stopping
@@ -90,7 +89,6 @@ Hybrid architecture combining SinBERT contextual embeddings with multi-kernel CN
 **Why SinBERT + CNN?**
 - SinBERT provides rich contextual embeddings that understand Sinhala morphology and semantics — critical for a low-resource language.
 - CNN layers capture local n-gram patterns (emotion-bearing phrases) from contextual embeddings, complementing the global context from the transformer.
-- LoRA reduces the number of trainable parameters while preserving SinBERT's pretrained knowledge.
 
 ## Quick Start
 
@@ -144,7 +142,6 @@ Class imbalance is handled with inverse-frequency class weights in the loss func
 | Cross-validation | 5-fold stratified |
 | Early stopping | Yes (per fold) |
 | Class imbalance | Weighted cross-entropy |
-| PEFT | LoRA (SinBERT + CNN model) |
 | Hardware | CUDA GPU (CPU fallback supported) |
 
 ## Troubleshooting
